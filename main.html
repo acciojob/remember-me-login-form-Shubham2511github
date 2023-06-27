@@ -8,9 +8,20 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+	<h1>Login Form</h1>
+	<form onsubmit ="handelSubmit(event)">
+		<label id="username">Username: </label>
+		<input type="text" id="username" placeholder="Username"><br><br>
+		<label id="password">Password: </label>
+		<input type="text" id="password" placeholder="Password"><br><br>
+		<input type="checkbox" id="checkbox">
+		<label id="checkbox">Remember me</label><br><br>
+		
+		<input type="submit" id="submit" value="Submit">
+	</form>
+	<button  id="existing" onclick="handleExistingUserLogin()">Login as existing user</button>
+
+    <script type="text/javascript" src="./script.js"></script>
 
 </body>
-
 </html>
