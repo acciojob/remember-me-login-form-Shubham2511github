@@ -11,8 +11,8 @@ function submitForm(event){
 		localStorage.setItem('username', username);
 		localStorage.setItem('password', password);
 	}else{
-		localStorage.removeItem('username');
-		localStorage.removeItem('password');
+		localStorage.removeItem('username',username);
+		localStorage.removeItem('password', password);
 	}
 	if(username){
 		alert('Logged in as '+ username);
@@ -29,3 +29,12 @@ function existingUser(){
 		alert('some error occured to access data');
 	}
 }
+var checkbox = document.getElementById('checkbox');
+var savedUsername = localStorage.getItem('username');
+var savedPassword = localStorage.getItem('password');
+
+    if (savedUsername && savedPassword) {
+      checkbox.checked = true;
+    } else {
+      checkbox.checked = false;
+    }
